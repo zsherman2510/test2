@@ -63,19 +63,11 @@ span.line {
 }
 
 #menu a {
+
     text-decoration: none;
     margin-right: 5px;
     color: rgb(255, 165, 0);
-}
 
-@media only screen and (min-width: 900px) {
-    #menu {
-        visibility: visible;
-    }
-
-    nav #hamburger {
-        display: none;
-    }
 }
 
 #menu_mobile {
@@ -88,7 +80,6 @@ span.line {
     padding: 25px 8%;
     height: 50vh;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, .05, 1.0);
-
 }
 
 #menu_mobile a {
@@ -97,10 +88,23 @@ span.line {
     margin-bottom: 20px;
 }
 
+
+
+
 .menu_show {
 
     transform: translate(50%, 0) !important;
 
+}
+
+@media only screen and (min-width: 968px){
+    nav #menu{
+        visibility: visible;
+    }
+
+    nav #hamburger {
+        display: none;
+    }
 }
 
 .hero {
@@ -149,21 +153,21 @@ section .title {
 section .header {
     margin-bottom: 1.2rem;
     font-size: 2rem;
-    color: rgb(19, 18, 18);
+    color: rgb(41, 41, 41);
 }
 
 section .text_wrapper p {
     margin: 2rem 0;
-    width: 90%;
     line-height: 35px;
+
 }
 
 section#story {
     background-image: url('/min_img/story-min.jpg');
+    height: 80vh;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
 }
 
 .image_wrapper {
@@ -173,23 +177,25 @@ section#story {
 }
 
 .image_wrapper .image {
-    width: 100%;
-    margin: 5px auto;
-}
-
-@media only screen and (min-width: 942px) {
-    .image_wrapper .image {
-        width: 375px;
-    }
+    margin: 5px;
 }
 
 .image_wrapper .image img {
     background-position: center;
-    background-size: cover;
-    object-fit: cover;
     height: 300px;
     width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+
 }
+
+@media only screen and (min-width: 800px){
+    .image_wrapper .image{
+        width: 320px;
+    }
+}
+
+
 
 section#reservation {
     background-image: url('/min_img/table-background.jpg');
@@ -209,46 +215,46 @@ section .call_info {
     margin-top: 1.5rem;
 }
 
+.fa-phone {
+    color: rgb(255, 165, 0);
+
+}
+
 .call_info h4 {
     font-weight: 500;
 }
 
-.phone_number {
+.call_info .phone_number {
     font-size: 2rem;
     color: rgb(255, 165, 0);
-}
-
-.fa-phone {
-    color: rgb(255, 165, 0);
-    font-size: 5rem;
 }
 
 .hours_wrapper {
     display: flex;
     justify-content: space-between;
     margin: 1rem auto;
-
 }
 
 .hours {
     font-weight: bold;
     letter-spacing: 1.2px;
     margin-top: .5rem;
+    color: rgb(41, 41, 41);
 }
 
 section#reservation .table {
-    background-image: url('/min_img/table-2-min.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
+    background-image: url('./min_img/table-2-min.jpg');
     height: 400px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
     margin: 1.5rem auto;
 }
 
 footer {
     background: #eee;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 .footer-wrapper {
@@ -264,7 +270,7 @@ footer {
 }
 
 .footer-bottom {
-    padding: 20px 8%;
+    padding: 20px 5px;
     margin-top: 1rem;
     border-top: 1px solid rgb(224, 224, 224);
     text-align: center;
